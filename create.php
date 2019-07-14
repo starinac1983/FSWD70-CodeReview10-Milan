@@ -58,13 +58,13 @@
            </tr>
            <tr>
               <td> <label>Title</label></td>
-               <td><input  type="text" name= "title" placeholder="" /></td>
+               <td><input  type="text" name= "title" placeholder="insert title" /></td>
            </tr>
            <tr>
             <td>
                <label for="mediaDescription">Media description</label></td>
           <td>
-                <textarea id="mediaDescription" name="mediaDescription" rows="3" cols="20"></textarea>
+                <textarea id="mediaDescription" placeholder="insert short description" name="mediaDescription"></textarea>
                 </td>
            </tr>
            <tr>

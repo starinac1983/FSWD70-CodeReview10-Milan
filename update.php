@@ -70,7 +70,7 @@ if ($_GET['id']) {
            <tr>
                <th>publishdate</th>
                
-               <td><input type="date" name="publishdate"  placeholder="publishdate" value="<?php echo $data['publishdate'] ?>" /></td>
+               <td><input type="date" name="publishDate"  placeholder="publishdate" value="<?php echo $data['publishdate'] ?>" /></td>
            </tr>
            <tr>
               <input type= "hidden" name= "id" value= "<?php echo $data['mediaID']?>"/>
