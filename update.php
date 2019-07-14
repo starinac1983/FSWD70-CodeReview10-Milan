@@ -21,25 +21,31 @@ if ($_GET['id']) {
    <title >Edit Media</title>
 
    <style type= "text/css">
-       fieldset {
-           margin : auto;
-           margin-top: 100px;
-            width: 50%;
+       * {
+        font-family: monospace;
        }
-
-       table  tr th {
-           padding-top: 20px;
+       legend {
+       text-align: center;
+       }
+       .md {
+           width : 30%;
+           margin: auto;
+       }
+       table {
+        padding: 10px;
        }
    </style>
+   <link rel="stylesheet"  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"  crossorigin="anonymous">
 
 </head>
 <body>
-
+<div class ="md">
 <fieldset>
-   <legend>Edit Media</legend>
-
+   
+<legend>Edit Media</legend>
    <form action="actions/a_update.php"  method="post">
-       <table  cellspacing="0" cellpadding= "0">
+       <table  class="table table-striped" class="md" border="0" cellspacing="1" cellpadding= "1">
+         
            <tr>
                <th>title</th>
                
@@ -54,7 +60,7 @@ if ($_GET['id']) {
            <tr>
                <th>Description</th>
                
-               <td><textarea type="text" name="mediaDescription" placeholder ="" value="<?php echo $data['mediadescription'] ?>" /></textarea></td>
+               <td><textarea type="text" name="mediaDescription" placeholder ="insert new description" value="<?php echo $data['mediadescription'] ?>" /></textarea></td>
            </tr>  
             <tr>
                <th>isbn_ean</th>
@@ -67,10 +73,11 @@ if ($_GET['id']) {
                <td><input type="date" name="publishdate"  placeholder="publishdate" value="<?php echo $data['publishdate'] ?>" /></td>
            </tr>
            <tr>
-               <input type= "hidden" name= "id" value= "<?php echo $data['mediaID']?>"/>
-               <td><button  type= "submit">Save Changes</button ></td>
-               <td><a href= "index.php"><button  type="button" >Back</button ></a></td >
+              <input type= "hidden" name= "id" value= "<?php echo $data['mediaID']?>"/>
+              <td colspan='0'><a href= "index.php"><button  class='btn btn-sm btn-primary' type="button" >Back</button ></a></td>
+              <td colspan='0'><button class='btn btn-sm btn-warning' type= "submit">Save Changes</button ></td>
            </tr>
+
        </table>
    </form >
 

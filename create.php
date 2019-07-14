@@ -4,24 +4,27 @@
    <title>Add Media</title>
 
    <style type= "text/css">
-       fieldset {
-           margin: auto;
-            margin-top: 100px;
-           width: 50% ;
+       * {
+        font-family: monospace;
        }
-
-       table tr th  {
-           padding-top: 20px;
+       legend {
+       text-align: center;
+       }
+       .md {
+           width : 30%;
+           margin: auto;
        }
    </style>
+   <link rel="stylesheet"  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"  crossorigin="anonymous">
 
 </head>
 <body>
+  <div class ="md">
 <fieldset>
    <legend>Add Media</legend>
 
    <form action="actions/a_create.php" method= "post">
-       <table cellspacing= "0" cellpadding="0">
+       <table class="table table-striped" cellspacing= "0" cellpadding="0">
            <tr>
                <td>
                <label for="fk_author">Author</label>
@@ -42,7 +45,7 @@
            <tr>
             <td>
                <label for="fk_genre">Genre</label></td>
-           <td><input list="genre" id="fk_genre" name="fk_genre">
+           <td><input list="genre" id="fk_genre" name="fk_genre"></td>
 
           <datalist id="genre">
             <option value="1">history</option>
@@ -54,26 +57,26 @@
           </td>
            </tr>
            <tr>
-               <td>Title</td>
+              <td> <label>Title</label></td>
                <td><input  type="text" name= "title" placeholder="" /></td>
            </tr>
            <tr>
             <td>
                <label for="mediaDescription">Media description</label></td>
           <td>
-                <textarea id="mediaDescription" name="mediaDescription" rows="3" cols="40"></textarea>
+                <textarea id="mediaDescription" name="mediaDescription" rows="3" cols="20"></textarea>
                 </td>
            </tr>
            <tr>
-               <td>Image</td>
+               <td><label>Image</label></td>
                <td><input  type="text" name="image" placeholder="insert url" /></td>
            </tr>
             <tr>
-               <td>Isbn_ean</td>
+               <td><label>Isbn_ean</label></td>
                <td><input  type="text" name="isbn_ean" placeholder="insert isbn or ean" /></td>
            </tr>
             <tr>
-               <td>Date</td>
+               <td><label>Date</label></td>
                <td><input type="date" name="publishdate"  placeholder="publishdate" value="<?php echo $data['publishdate'] ?>" /></td>
            </tr>
            <tr>
@@ -116,13 +119,14 @@
           </td>
            </tr>
            <tr>
-               <td><button type ="submit">Insert media</button></td>
-               <td><a href= "index.php"><button  type="button">Back</button></a></td>
-           </tr >
+               <td><button class='btn btn-sm btn-danger' type ="submit">Insert media</button></td>
+               <td><a href= "index.php"><button class='btn btn-sm btn-primary' type="button">Back</button></a></td>
+           </tr>
        </table>
    </form>
 
-</fieldset >
+</fieldset>
+</div>
 </body>
 </html>
 

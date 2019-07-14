@@ -22,30 +22,34 @@ if ($_GET['id']) {
    <title>Show media</title>
 
    <style type= "text/css">
-       fieldset {
-           margin : auto;
-           margin-top: 100px;
-            width: 50%;
+       * {
+        font-family: monospace;
        }
-
-       table  tr th {
-           padding-top: 5px;
+       legend {
+       text-align: center;
+       }
+       .md {
+           width : 30%;
+           margin: auto;
        }
        img {
-           width: 20%;
+       width: 150px;
+       margin: auto;
        }
+      
    </style>
+   <link rel="stylesheet"  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"  crossorigin="anonymous">
 
 </head>
 <body>
-
+<div class ="md">
 <fieldset>
    <legend>Show media</legend>
 
    <form action="actions/a_update.php"  method="post">
-       <table  cellspacing="0" cellpadding= "0">
+       <table  class="table table-striped" class="md" cellspacing="0" cellpadding= "0">
            <tr>
-               <td>title</td>
+               <td><label> title</label></td>
               <td>
                   <p>
                     <?php echo $data['title'] ?>
@@ -53,7 +57,7 @@ if ($_GET['id']) {
                 </td>
            </tr> 
            <tr>
-               <td>Genge</td>
+               <td><label>Genre</label></td>
               <td>
                   <p>
                     <?php echo $data['FK_genre'] ?>
@@ -61,7 +65,7 @@ if ($_GET['id']) {
                 </td>
            </tr> 
            <tr>
-               <td>Author</td>
+               <td><label>Author</label></td>
               <td>
                   <p>
                     <?php echo $data['FK_author'] ?>
@@ -69,12 +73,12 @@ if ($_GET['id']) {
                 </td>
            </tr> 
            <tr>
-               <td>image</td>
+               <td><label>image</label></td>
                
                <td><img src="<?php echo $data['image'] ?>"></td>
            </tr> 
            <tr>
-               <td>Description</td>
+               <td><label>Description</label></td>
                <td>
                   <p>
                     <?php echo $data['mediaDescription'] ?>
@@ -82,7 +86,7 @@ if ($_GET['id']) {
                 </td>
            </tr>  
             <tr>
-               <td>isbn_ean</td>
+               <td><label>isbn_ean</label></td>
                <td>
                   <p>
                     <?php echo $data['isbn_ean'] ?>
@@ -90,7 +94,7 @@ if ($_GET['id']) {
                 </td>
            </tr>     
            <tr>
-               <td>publishdate</td>
+               <td><label>publishdate</label></td>
                
                <td>
                   <p>
@@ -99,7 +103,7 @@ if ($_GET['id']) {
                 </td>
            </tr>
             <tr>
-               <td>publisher</td>
+               <td><label>publisher</label></td>
                
                <td>
                   <p>
@@ -108,7 +112,7 @@ if ($_GET['id']) {
                 </td>
            </tr>
            <tr>
-               <td>Media type</td>
+               <td><label>Media type</label></td>
                
                <td>
                   <p>
@@ -117,7 +121,7 @@ if ($_GET['id']) {
                 </td>
            </tr>
            <tr>
-               <td>Status</td>
+               <td><label>Status</label></td>
                
                <td>
                   <p>
@@ -127,8 +131,8 @@ if ($_GET['id']) {
            </tr>
            <tr>
                <input type= "hidden" name= "id" value= "<?php echo $data['mediaID']?>"/>
-              
-               <td><a href= "index.php"><button  type="button" >Back</button ></a></td >
+               <td></td>
+               <td><a href= "index.php"><button class='btn btn-sm btn-primary' type="button" >Back</button ></a></td >
            </tr>
        </table>
    </form >
