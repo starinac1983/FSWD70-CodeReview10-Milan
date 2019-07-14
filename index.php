@@ -65,6 +65,7 @@
                        <td>".$row['isbn_ean']."</td>
                        <td>".$row['publisherName']."</td>
                        <td>
+                           <a href='showmedia.php?id=" .$row['mediaID']."'><button type='button'>Show media</button></a>
                            <a href='update.php?id=" .$row['mediaID']."'><button type='button'>Edit</button></a>
                            <a href='delete.php?id=" .$row['mediaID']."'><button type='button'>Delete</button></a>
                        </td>

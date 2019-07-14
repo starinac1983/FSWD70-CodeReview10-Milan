@@ -15,11 +15,11 @@ if ($_GET['id']) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title >Delete User</title>
+   <title >Delete Media</title>
 </head>
 <body>
 
-<h3>Do you really want to delete this user?</h3>
+<h3>Do you really want to delete this media?</h3>
 <form action ="actions/a_delete.php" method="post">
    <input type="hidden" name= "id" value="<?php echo $data['mediaID'] ?>" />
    <button type="submit">Yes, delete it!</button>
